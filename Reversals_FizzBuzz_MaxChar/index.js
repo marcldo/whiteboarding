@@ -14,9 +14,29 @@ function reverseString(str) {
   //returns string from array
   return reversed.join("");
 
+};
+
+// CHALLENGE 2: VALIDATE A PALINDROME
+// Return true if palindrome false if not
+// ex. isPalindrome('racecar') === true
+function isPalindrome(str) {
+
+  const reversed = [];
+
+  for (let i = 0; i < str.length; i++) {
+    reversed.unshift(str[i])
+  };
+
+  const revStr = reversed.join("")
+
+  if (revStr === str) {
+    return true;
+  } else {
+    return false;
+  }
+
 }
 
-
-const output = reverseString('hello hi')
+const output = isPalindrome('hello')
 
 console.log(output)
