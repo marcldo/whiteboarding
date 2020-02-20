@@ -11,8 +11,8 @@ function reverseString(str) {
     reversed.unshift(str[i]);
   }
 
-  const revStr = reversed.join("");
-  return revStr
+  return reversed.join("");
+
 }
 
 const output = reverseString('hello hi')
