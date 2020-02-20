@@ -11,9 +11,11 @@ function reverseString(str) {
     reversed.unshift(str[i]);
   }
 
+  //returns string from array
   return reversed.join("");
 
 }
+
 
 const output = reverseString('hello hi')
 
