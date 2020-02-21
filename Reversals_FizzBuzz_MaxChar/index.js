@@ -37,6 +37,21 @@ function isPalindrome(str) {
 
 }
 
-const output = isPalindrome('hello')
+// Challenge 3: reverse and integer
+
+function reverseInt(int) {
+
+  const strInt = int.toString();
+  let reversed = '';
+
+  for (integer of strInt) {
+    reversed = integer + reversed
+  }
+
+  return parseInt(reversed)
+
+}
+
+const output = reverseInt(123456);
 
 console.log(output)
