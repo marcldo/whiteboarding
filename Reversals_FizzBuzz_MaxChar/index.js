@@ -4,12 +4,12 @@
 // ex. reverseString('hello') === 'olleh'
 function reverseString(str) {
 
-  const reversed = []
+  const reversed = [];
 
   //unshift adds elements to beginning of an array
   for (let i = 0; i < str.length; i++) {
     reversed.unshift(str[i]);
-  }
+  };
 
   //returns string from array
   return reversed.join("");
@@ -24,7 +24,7 @@ function isPalindrome(str) {
   const reversed = [];
 
   for (let i = 0; i < str.length; i++) {
-    reversed.unshift(str[i])
+    reversed.unshift(str[i]);
   };
 
   const revStr = reversed.join("")
@@ -44,10 +44,10 @@ function reverseInt(int) {
   let reversed = '';
 
   for (integer of strInt) {
-    reversed = integer + reversed
-  }
+    reversed = integer + reversed;
+  };
 
-  return parseInt(reversed)
+  return parseInt(reversed);
 
 }
 
@@ -66,26 +66,53 @@ function capitalizeLetters(str) {
     } else {
       capStr = capStr + str[i]
     }
-  }
+  };
 
-  return capStr
+  return capStr;
 }
-
 
 // CHALLENGE 5: MAX CHARACTER
 // Return a the most common character in a string
 // ex. maxCharacter('javascript') == 'a'
 function maxCharacter(str) {
+  let maxChar = '';
+  let maxCount = 0;
 
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    let count = 0;
+
+    for (let j = 0; j < str.length; j++) {
+      if (str[j] === str[i]) {
+        count++;
+      }
+    }
+
+    if (count > maxCount) {
+      maxChar = char;
+      maxCount = count;
+    }
+  }
+  return (maxChar);
 }
 
 // CHALLENGE 6: FIZZBUZZ
 // prints all numbers from 1 to 100. For multiples of 3 print "Fizz"
 // for multiples of 5 print "Buzz". For numbers which are both 3 and 5, print "FizzBuzz"
 function fizzBuzz() {
-
+  for (let i = 1; i <= 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+      console.log("Fizz");
+    } else if (i % 5 === 0) {
+      console.log("Buzz");
+    } else {
+      console.log(i);
+    }
+  };
 }
 
-const output = capitalizeLetters("i love javascript");
+const output = maxCharacter("javascript");
 
 console.log(output)
